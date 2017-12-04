@@ -28,5 +28,8 @@ while cmd !="0":
 				val = val%26;
 				val+=ord('A')
 			enc=enc+chr(val)
+		print("Encryption Sucess\nEncrypted text:\n")
 		print (enc)
+		s=input("\nPress any key to continue:");
+		
 	
