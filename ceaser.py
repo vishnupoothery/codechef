@@ -52,4 +52,24 @@ while cmd !="0":
 		print("Decryption Sucess\nDecrypted text:\n")
 		print (dec)
 		s=input("\nPress any key to continue:");
-	
+	elif cmd == '3':
+		string = input("Enter string to Hack :\n")
+		for key in range(26):
+			dec=""
+			for i in range(len(string)):
+				val = ord(string[i])
+				if(val >=ord('a') and val <=ord('z')):
+					val-=ord('a')
+					val= val-key+26;
+					val = val%26;
+					val+=ord('a')
+				elif(val >=ord('A') and val <=ord('Z')):
+					val-=ord('A')
+					val= val-key+26;
+					val = val%26;
+					val+=ord('A')
+				dec=dec+chr(val)
+			print("\n**********************************************************\nDecrypted with key %d\nDecrypted text:\n" % key)
+			print (dec)
+		s=input("\nPress any key to continue:");	
+		
