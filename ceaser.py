@@ -31,5 +31,25 @@ while cmd !="0":
 		print("Encryption Sucess\nEncrypted text:\n")
 		print (enc)
 		s=input("\nPress any key to continue:");
-		
+	elif cmd == '2':
+		string = input("Enter string to Decrypt :\n")
+		key = int(input("Enter decryption key : "))
+		key=key%26
+		dec=""
+		for i in range(len(string)):
+			val = ord(string[i])
+			if(val >=ord('a') and val <=ord('z')):
+				val-=ord('a')
+				val= val-key+26;
+				val = val%26;
+				val+=ord('a')
+			elif(val >=ord('A') and val <=ord('Z')):
+				val-=ord('A')
+				val= val-key+26;
+				val = val%26;
+				val+=ord('A')
+			dec=dec+chr(val)
+		print("Decryption Sucess\nDecrypted text:\n")
+		print (dec)
+		s=input("\nPress any key to continue:");
 	
