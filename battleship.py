@@ -40,4 +40,6 @@ for turn in range(4):
       board[guess_row][guess_col] = "X"
     if (turn == 3):
       print ("Game Over")
+      print ("Ship's location")
+      print ("row : %d\ncol : %d" %(ship_row, ship_col))
     print_board(board)
